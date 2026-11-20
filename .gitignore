@@ -1,0 +1,3 @@
+__pycache__/
+*.pyc
+SourceCode/smart_parking.db

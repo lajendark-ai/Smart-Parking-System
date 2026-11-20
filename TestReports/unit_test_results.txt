@@ -1,0 +1,87 @@
+test_TC01_valid_login (test_parking.AuthTests.test_TC01_valid_login)
+TC-01 Valid credentials log in for the matching role ... ok
+test_TC02_wrong_password (test_parking.AuthTests.test_TC02_wrong_password)
+TC-02 Wrong password is rejected with a generic message ... ok
+test_TC03_role_mismatch (test_parking.AuthTests.test_TC03_role_mismatch)
+TC-03 A Staff account cannot sign in through the Manager login ... ok
+test_TC04_empty_fields (test_parking.AuthTests.test_TC04_empty_fields)
+TC-04 Empty username or password is rejected ... ok
+test_TC05_lockout_after_five_failures (test_parking.AuthTests.test_TC05_lockout_after_five_failures)
+TC-05 Account locks after 5 failed attempts (boundary) ... ok
+test_TC06_passwords_are_hashed (test_parking.AuthTests.test_TC06_passwords_are_hashed)
+TC-06 Passwords are never stored in plain text ... ok
+test_TC24_fee_boundaries (test_parking.FeeTests.test_TC24_fee_boundaries)
+TC-24 Fee uses started hours with a one-hour minimum (boundary values) ... ok
+test_TC25_fee_negative_duration (test_parking.FeeTests.test_TC25_fee_negative_duration)
+TC-25 Exit time before entry time is rejected ... ok
+test_TC26_fee_follows_vehicle_type (test_parking.FeeTests.test_TC26_fee_follows_vehicle_type)
+TC-26 Fee depends on the vehicle type tariff ... ok
+test_TC27_manager_changes_rate (test_parking.FeeTests.test_TC27_manager_changes_rate)
+TC-27 Manager can change a rate; invalid rates are rejected ... ok
+test_TC15_entry_assigns_slot (test_parking.ParkingTests.test_TC15_entry_assigns_slot)
+TC-15 Vehicle entry assigns the first free slot of its type ... ok
+test_TC16_duplicate_entry (test_parking.ParkingTests.test_TC16_duplicate_entry)
+TC-16 A parked vehicle cannot enter again ... ok
+test_TC17_no_free_slot (test_parking.ParkingTests.test_TC17_no_free_slot)
+TC-17 Entry fails with a clear message when no slot of that type is free ... ok
+test_TC18_type_mismatch (test_parking.ParkingTests.test_TC18_type_mismatch)
+TC-18 A known vehicle cannot enter under a different type ... ok
+test_TC19_entry_validation (test_parking.ParkingTests.test_TC19_entry_validation)
+TC-19 Entry form validates number, owner and mobile ... ok
+test_TC20_user_cannot_park (test_parking.ParkingTests.test_TC20_user_cannot_park)
+TC-20 A User account cannot record vehicle entry ... ok
+test_TC21_exit_frees_slot_and_records_payment (test_parking.ParkingTests.test_TC21_exit_frees_slot_and_records_payment)
+TC-21 Exit releases the slot and stores one payment ... ok
+test_TC22_exit_unknown_or_not_parked (test_parking.ParkingTests.test_TC22_exit_unknown_or_not_parked)
+TC-22 Exit for an unknown or not-parked vehicle shows an error ... ok
+test_TC23_invalid_payment_method (test_parking.ParkingTests.test_TC23_invalid_payment_method)
+TC-23 Exit requires a valid payment method ... ok
+test_TC07_register_valid_user (test_parking.RegistrationTests.test_TC07_register_valid_user)
+TC-07 A new user can register with valid details ... ok
+test_TC08_duplicate_username (test_parking.RegistrationTests.test_TC08_duplicate_username)
+TC-08 Duplicate username is rejected ... ok
+test_TC09_invalid_fields (test_parking.RegistrationTests.test_TC09_invalid_fields)
+TC-09 Invalid name, username, password and mobile are rejected ... ok
+test_TC10_manager_adds_staff (test_parking.RegistrationTests.test_TC10_manager_adds_staff)
+TC-10 Manager can create a staff account ... ok
+test_TC11_staff_cannot_add_staff (test_parking.RegistrationTests.test_TC11_staff_cannot_add_staff)
+TC-11 Staff and User roles are denied manager functions ... ok
+test_TC28_reserve_slot (test_parking.ReservationTests.test_TC28_reserve_slot)
+TC-28 User reserves a slot; the slot becomes Reserved ... ok
+test_TC29_duration_limits (test_parking.ReservationTests.test_TC29_duration_limits)
+TC-29 Reservation duration must be 1-12 hours (boundary values) ... ok
+test_TC30_one_active_reservation (test_parking.ReservationTests.test_TC30_one_active_reservation)
+TC-30 A vehicle cannot hold two active reservations ... ok
+test_TC31_cancel_releases_slot (test_parking.ReservationTests.test_TC31_cancel_releases_slot)
+TC-31 Cancelling a reservation frees the slot ... ok
+test_TC32_entry_uses_reserved_slot (test_parking.ReservationTests.test_TC32_entry_uses_reserved_slot)
+TC-32 Entry of a reserved vehicle uses its reserved slot and completes the reservation ... ok
+test_TC33_reserved_slot_not_given_to_others (test_parking.ReservationTests.test_TC33_reserved_slot_not_given_to_others)
+TC-33 A reserved slot is not assigned to another vehicle ... ok
+test_TC34_no_slot_for_reservation (test_parking.ReservationTests.test_TC34_no_slot_for_reservation)
+TC-34 Reservation fails when every slot of the type is taken ... ok
+test_TC35_expired_reservation_released (test_parking.ReservationTests.test_TC35_expired_reservation_released)
+TC-35 An expired reservation releases its slot automatically ... ok
+test_TC36_other_user_cannot_cancel (test_parking.ReservationTests.test_TC36_other_user_cannot_cancel)
+TC-36 A user cannot cancel or reserve with another user's data ... ok
+test_TC37_add_and_validate_slot (test_parking.SlotTests.test_TC37_add_and_validate_slot)
+TC-37 Manager adds a slot; bad or duplicate numbers are rejected ... ok
+test_TC38_remove_slot_rules (test_parking.SlotTests.test_TC38_remove_slot_rules)
+TC-38 Only an unused, available slot can be removed ... ok
+test_TC39_account_status (test_parking.SlotTests.test_TC39_account_status)
+TC-39 Manager disables and re-enables an account; disabled user cannot log in ... ok
+test_TC40_summary_matches_data (test_parking.SlotTests.test_TC40_summary_matches_data)
+TC-40 Dashboard summary equals the stored data ... ok
+test_TC41_slots_in_natural_order (test_parking.SlotTests.test_TC41_slots_in_natural_order)
+TC-41 Slots are listed and assigned in natural order (A2 before A10) ... ok
+test_TC12_add_vehicle (test_parking.VehicleTests.test_TC12_add_vehicle)
+TC-12 User registers a vehicle ... ok
+test_TC13_invalid_vehicle_number (test_parking.VehicleTests.test_TC13_invalid_vehicle_number)
+TC-13 Invalid vehicle number formats are rejected ... ok
+test_TC14_duplicate_vehicle (test_parking.VehicleTests.test_TC14_duplicate_vehicle)
+TC-14 The same vehicle cannot be registered twice ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 7.621s
+
+OK
